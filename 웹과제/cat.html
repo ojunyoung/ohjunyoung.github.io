@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script>
+      var imgs = ["c1.jpg",
+                    "c2.jpg",
+                    "c3.jpg",
+                    "c4.jpg"];
+
+      var next = 1;
+      function change(img){
+        img.src = imgs[next];
+        next++;
+        next %= imgs.length;
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <h2>고양이 사진모음</h2>
+      <h6> 이미지 클릭시 다음 사진 </h6>
+    </header>
+    <section id="cat">
+      <article id="article1">
+          <img style="border : 20px ridge wheat"
+          src="c1.jpg" alt="고먐미" height="200" width="200" onclick="change(this)">
+      </article>
+    </section>
+
+  </body>
+</html>

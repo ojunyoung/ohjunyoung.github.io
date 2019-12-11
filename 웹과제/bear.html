@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+<script>
+  function drawImage() {
+    var sel = document.getElementById("animal");
+    var img = document.getElementById("animalimage");
+    img.src = sel.options[sel.selectedIndex].value;
+  }
+</script>
+  </head>
+  <body onload = "drawImage()">
+    <header>
+      <h2>곰 사진모음</h2>
+      <h6> 선택하세요:> </h6>
+    </header>
+    <form>
+    <section id="bear">
+        <select id = "animal" onchange="drawImage()">
+          <option value="b1.jpg"> 곰
+          <option value="b2.jpg"> 돌
+          <option value="b4.jpg"> 이
+          <option value="b3.jpg"> 푸
+        </select>
+         <img id="animalimage" src="b1.jpg" alt="곰도리사진" height="200" width="200">
+    </section>
+      </form>
+  </body>
+</html>

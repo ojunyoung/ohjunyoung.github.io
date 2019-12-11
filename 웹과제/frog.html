@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <header>
+      <h2>개구리 사진모음</h2>
+      <h6>방문시간은 짝수? 홀수?</h6>
+    </header>
+    <section id="frog">
+      <article id="article1">
+          <img src="f1.jpg" alt="f1" height="200" width="200">
+          <img src="f2.jpg" alt="f1" height="200" width="200">
+          <img src="f3.jpg" alt="f1" height="200" width="200">
+          <img src="f4.jpg" alt="f1" height="200" width="200">
+
+      </article>
+    </section>
+    <script type="text/javascript">
+      var current = new Date();
+      if(current.getSeconds() % 2 == 0)
+        document.body.style.backgroundColor = "violet";
+      else
+        document.body.style.backgroundColor = "lightskyblue";
+      document.write(current.getSeconds(), "초<br>");
+    </script>
+  </body>
+</html>

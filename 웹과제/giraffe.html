@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <header>
+      <h2>기린 사진모음</h2>
+      <h6>자동회전</h6>
+    </header>
+    <section id="giraffe">
+      <article id="article1">
+          <img id="g1" src="g0.jpg" alt="f1" height="200" width="200">
+          <img id="g2" src="g1.jpg" alt="f1" height="200" width="200">
+          <img id="g3" src="g2.jpg" alt="f1" height="200" width="200">
+          <img id="g4" src="g3.jpg" alt="f1" height="200" width="200">
+
+      </article>
+    </section>
+    <script type="text/javascript">
+      var i = 0;
+      var timerID = setInterval("doRotate()", 1000);
+
+      function doRotate() {
+        var g1 = document.getElementById("g1");
+        var g2 = document.getElementById("g2");
+        var g3 = document.getElementById("g3");
+        var g4 = document.getElementById("g4");
+        g1.src = "g" + i%4 + ".jpg";
+        g2.src = "g" + (i+1)%4 + ".jpg";
+        g3.src = "g" + (i+3)%4 + ".jpg";
+        g4.src = "g" + (i+2)%4 + ".jpg";
+        i++;
+      }
+    </script>
+  </body>
+</html>
